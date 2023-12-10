@@ -1,0 +1,34 @@
+[
+  {
+    "nombre": "Slayther",
+    "apellido": "Zamora",
+    "nacionalidad": "Ecuatoriano",
+    "fechaNacimiento": "Dec 10, 2023, 2:03:11 PM",
+    "peliculas": [],
+    "id": "1f87695c-a326-4dae-8d98-1406ba03aa09"
+  },
+  {
+    "nombre": "Joshua",
+    "apellido": "Rodriguez",
+    "nacionalidad": "Ecuatoriano",
+    "fechaNacimiento": "Dec 10, 2023, 2:03:11 PM",
+    "peliculas": [],
+    "id": "7ce671fa-1d00-4510-819b-31323c1b7c56"
+  },
+  {
+    "nombre": "Marcela",
+    "apellido": "Yanez",
+    "nacionalidad": "Ecuatoriano",
+    "fechaNacimiento": "Dec 10, 2023, 2:03:11 PM",
+    "peliculas": [],
+    "id": "20b57605-5351-44ed-b949-26205a5c9a03"
+  },
+  {
+    "nombre": "Odalis",
+    "apellido": "Vera",
+    "nacionalidad": "Ecuatoriano",
+    "fechaNacimiento": "Dec 10, 2023, 2:03:11 PM",
+    "peliculas": [],
+    "id": "b2c38078-7563-46b8-a476-3c347b28a021"
+  }
+]

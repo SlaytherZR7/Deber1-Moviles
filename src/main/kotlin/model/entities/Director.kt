@@ -1,17 +1,18 @@
 package model.entities
 
 import java.util.Date
+import java.util.UUID
 
 
 class Director(
-    val id: Int,
     var nombre: String,
     var apellido: String,
     var nacionalidad: String,
     var fechaNacimiento: Date,
     var peliculas: List<Pelicula>
-) {
+){
+    val id = UUID.randomUUID()
     override fun toString(): String {
-        return "Director(id=$id, nombre='$nombre', apellido='$apellido', nacionalidad='$nacionalidad', fechaNacimiento='$fechaNacimiento', peliculas=$peliculas)"
+        return "Director(nombre='$nombre', apellido='$apellido', nacionalidad='$nacionalidad', fechaNacimiento=$fechaNacimiento)"
     }
 }
