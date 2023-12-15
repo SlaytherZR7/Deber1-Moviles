@@ -7,10 +7,10 @@ fun main(args: Array<String>) {
 
     llenarLista()
     val directorDAO = DirectorDAO()
-    var opcion = 0
+    var opcion: Int
 
-    while (opcion != 5) {
-        var opcion = showMenu()
+    do {
+        opcion = showMenu()
         when (opcion) {
             1 -> insertarDirector()
             2 -> getDirectores()
@@ -18,10 +18,11 @@ fun main(args: Array<String>) {
                 getDirectores()
                 print("Ingrese el numero del director a actualizar:  ")
                 val numeroDirector = readLine()?.toInt()
-                val director = directorDAO.getAll()[numeroDirector!! - 1]
-                print("Informacion actual del director:  ${director.toString()}")
-                actualizarDirector(director)
+                val directorAntiguo = directorDAO.getAll()[numeroDirector!! - 1]
+                println("Informacion actual del director:  ${directorAntiguo.toString()}")
+                actualizarDirector(directorAntiguo)
             }
+
             4 -> {
                 getDirectores()
                 print("Ingrese el numero del director a eliminar:  ")
@@ -29,19 +30,25 @@ fun main(args: Array<String>) {
                 val director = directorDAO.getAll()[numeroDirector!! - 1]
                 directorDAO.deleteById(director.id)
             }
-            5 -> println("Gracias por usar el programa")
+
+            5 -> {
+                println("Gracias por usar el programa")
+                break
+            }
+
             else -> println("Opcion no valida")
         }
-    }
+    } while (opcion != 5)
+
 }
 
 private fun showMenu(): Int {
     println("¿Que accion desea realizar?")
     println("-------------------------------")
-    println("1 - Insertar nueva pelicula")
-    println("2 - Ver lista de peliculas")
-    println("3 - Actualizar pelicula")
-    println("4 - Eliminar pelicula")
+    println("1 - Insertar nuevo Director")
+    println("2 - Ver lista de directores")
+    println("3 - Actualizar director")
+    println("4 - Eliminar director")
     println("5 - Salir")
     print("Ingrese el numero de la opcion:  ")
     return readln().toInt()
@@ -65,40 +72,17 @@ private fun insertarDirector() {
     DirectorDAO().save(Director(nombre!!, apellido!!, nacionalidad!!, Date(), emptyList()))
 }
 
-private fun actualizarDirector(director: Director) {
-    print("Ingrese el nombre del director:  ")
+private fun actualizarDirector(directorAntiguo: Director) {
+    print("Ingrese el nuevo nombre del director:  ")
     val nombre = readLine()
-    print("Ingrese el apellido del director:  ")
+    print("Ingrese el nuevo apellido del director:  ")
     val apellido = readLine()
-    print("Ingrese la nacionalidad del director:  ")
+    print("Ingrese la nueva nacionalidad del director:  ")
     val nacionalidad = readLine()
-    print("Ingrese la fecha de nacimiento del director:  ")
+    print("Ingrese la nueva fecha de nacimiento del director:  ")
     val fechaNacimiento = readLine()
-    val director = Director(nombre!!, apellido!!, nacionalidad!!, Date(), emptyList())
-    DirectorDAO().update(director)
-}
-
-private fun editarPelicula(
-    pelicula: Pelicula,
-    directorDAO: DirectorDAO,
-    director: Director
-) {
-    println("Ingrese el nombre de la pelicula")
-    val nombre = readLine()
-    println("Ingrese el genero de la pelicula")
-    val genero = readLine()
-    println("Ingrese la fecha de la pelicula")
-    val fechaEstreno = readLine()
-    println("La pelicula solo se puede ver en cines")
-    val soloEnCines = readLine()?.toBoolean()
-    println("Ingrese el costo de la pelicula")
-    val costo = readLine()?.toDouble()
-    pelicula.titulo = nombre!!
-    pelicula.genero = genero!!
-    pelicula.fechaEstreno = Date()
-    pelicula.soloEnCines = soloEnCines!!
-    pelicula.precio = costo!!
-    directorDAO.update(director)
+    val directorNuevo = Director(nombre!!, apellido!!, nacionalidad!!, Date(), emptyList())
+    DirectorDAO().update(directorAntiguo, directorNuevo)
 }
 
 fun llenarLista() {

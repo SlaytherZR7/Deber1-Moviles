@@ -36,10 +36,10 @@ class DirectorDAO : IDirectorDAO {
         saveAll(directores)
     }
 
-    override fun update(director: Director) {
+    override fun update(directorAntiguo: Director, directorNuevo: Director) {
         val directores = getAll().toMutableList()
-        val index = directores.indexOfFirst { it.id == director.id }
-        directores[index] = director
+        val index = directores.indexOfFirst { it.id == directorAntiguo.id }
+        directores[index] = directorNuevo
         saveAll(directores)
     }
 

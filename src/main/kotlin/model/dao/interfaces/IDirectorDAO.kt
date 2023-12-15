@@ -7,7 +7,7 @@ interface IDirectorDAO {
     fun getAll(): List<Director>
     fun getById(id: UUID): Director?
     fun save(director: Director)
-    fun update(director: Director)
+    fun update(directorAntiguo: Director, directorNuevo: Director)
     fun deleteById(id: UUID)
     fun saveAll(directores: List<Director>)
 }

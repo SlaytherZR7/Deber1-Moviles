@@ -5,21 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4578a73f-1720-468f-872d-72a0ba5da179" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/dao/implementaciones/CrudDAO.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/dao/implementaciones/DirectorDAO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/dao/implementaciones/DirectorDAO.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/dao/implementaciones/FactoryDAOImpl.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/dao/implementaciones/PeliculaDAO.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/dao/interfaces/FactoryDAO.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/dao/interfaces/ICrudDAO.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/dao/interfaces/IDirectorDAO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/dao/interfaces/IDirectorDAO.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/dao/interfaces/IPeliculaDAO.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/entities/Director.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/entities/Director.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/entities/Pelicula.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/entities/Pelicula.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Director.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Pelicula.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/directores.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/directores.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,6 +94,9 @@
       <workItem from="1701346808502" duration="2536000" />
       <workItem from="1702230517538" duration="660000" />
       <workItem from="1702234880300" duration="932000" />
+      <workItem from="1702394345622" duration="88000" />
+      <workItem from="1702582967105" duration="3883000" />
+      <workItem from="1702683404623" duration="466000" />
     </task>
     <servers />
   </component>
